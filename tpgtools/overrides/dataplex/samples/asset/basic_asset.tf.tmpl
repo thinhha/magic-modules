@@ -49,7 +49,7 @@ resource "google_dataplex_asset" "primary" {
   }
  
   resource_spec {
-    name = "projects/{{project}}/buckets/dataplex-bucket-%{random_suffix}"
+    name = "projects/{{project}}/buckets/${google_storage_bucket.basic_bucket.name}"
     type = "STORAGE_BUCKET"
   }
  
